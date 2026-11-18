@@ -1,8 +1,8 @@
 FROM node:lts-alpine
 WORKDIR /app
 
-RUN apk --no-cache add openjdk21
-RUN yarn global add firebase-tools
+RUN apk --no-cache add openjdk25-jre-headless
+RUN npm install -g firebase-tools
 
 ADD firebase.json .
 
